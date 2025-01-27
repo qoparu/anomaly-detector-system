@@ -28,7 +28,11 @@ To install the Anomaly Detector System, follow these steps:
 ## Usage
 To use the Anomaly Detector System, run the following command:
 ```bash
-python monitor.py
+Run monitor.py for normal behavior (e.g., 1 hour).
+
+Run inject_anomalies.py while monitoring to simulate attacks/errors.
+
+Label the CSV data (0=normal, 1=anomaly) based on timestamps.
 ```
 
 ## Contributing
