@@ -28,7 +28,7 @@ To install the Anomaly Detector System, follow these steps:
 ## Usage
 To use the Anomaly Detector System, run the following command:
 ```bash
-python main.py
+python monitor.py
 ```
 
 ## Contributing
@@ -36,6 +36,3 @@ We welcome contributions to the Anomaly Detector System. Please fork the reposit
 
 ## License
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
-## Contact
-For any questions or feedback, please contact us at support@example.com.
