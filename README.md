@@ -26,7 +26,19 @@ To install the Anomaly Detector System, follow these steps:
     ```
 
 ## Usage
-To use the Anomaly Detector System, run the following command:
+The project exposes a command line interface through `main.py`. Use one of the
+subcommands below depending on the action you want to perform:
+
 ```bash
-python main.py
+# Train the model
+python main.py train
+
+# Collect system metrics
+python main.py monitor
+
+# Inject anomalies (e.g. CPU stress for 60s)
+python main.py inject --type cpu --duration 60
+
+# Run live anomaly detection
+python main.py detect
 ```
