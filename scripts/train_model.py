@@ -27,12 +27,11 @@ best_model = None
 
 for name, model in models.items():
     print(f"\n=== Training {name} ===")
-    
-    if name == "Local Outlier Factor":
-        preds = model.fit_predict(features)
-    else:
-        model.fit(features)
-        preds = model.predict(features)
+
+    # LocalOutlierFactor with novelty=True does not support fit_predict
+    # so we simply call fit followed by predict for all models
+    model.fit(features)
+    preds = model.predict(features)
     
     preds = np.where(preds == -1, 1, 0)  # Convert to binary labels
     report = classification_report(labels, preds)
